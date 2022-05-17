@@ -1,0 +1,46 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    
+###Custom Messages
+product-app:
+  messages:
+    productSaved: Product Data '" + savedProduct.getProdId() + "' Saved Successfully
+    productFailedToSave: Product Data Not Saved ...??
+    updatedProductData: Product Data '" + updatedProduct.getProdId() + "' Updated Successfully
+    failedToUpdate: Product Data Not Updated...????
+
+    exceptionMsg: Product Data '"+id+"' Not Exists..!
+    
+         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
